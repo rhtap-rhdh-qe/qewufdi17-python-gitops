@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: qewufdi17-python-gitops
+  description: This is GitOps manifest for qewufdi17-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: qewufdi17-python
+    backstage.io/kubernetes-id: qewufdi17-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: qewufdi17-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:qewufdi17-python
